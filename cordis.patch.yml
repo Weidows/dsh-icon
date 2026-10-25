@@ -1,0 +1,5 @@
+# Mounts dsh-icon into the profile loader. The client bundle only loads when this
+# package has its own loader row in the profile-level graph.
+- insert:
+    - id: dsh-icon
+      name: '@weidows/dsh-icon'

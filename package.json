@@ -1,0 +1,51 @@
+{
+  "name": "@weidows/dsh-icon",
+  "version": "0.1.0",
+  "description": "在工具调用行给读写的文件显示 JetBrains 文件类型图标，主题可在设置页切换。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build-icons.mjs",
+    "test": "node --test test/resolve.test.js test/client.test.js"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "icons",
+    "jetbrains",
+    "file-icons"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Weidows/dsh-icon.git"
+  },
+  "homepage": "https://dsh-plugin.org/plugins/weidows/dsh-icon",
+  "bugs": {
+    "url": "https://github.com/Weidows/dsh-icon/issues"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
